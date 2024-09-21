@@ -12,7 +12,7 @@
   },
   "aliases": {
     "components": "src",
-    "utils": "@repo/utils",
+    "utils": "@effective-octo-waffle/utils",
     "ui": "src"
   }
 }

@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
-import { ThemeProvider } from '@repo/ui';
-import '@repo/ui/dist/index.css';
+import { ThemeProvider } from '@effective-octo-waffle/ui';
+import '@effective-octo-waffle/ui/dist/index.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@effective-octo-waffle/ui"
 
 export default function Page(): JSX.Element {
 	return (

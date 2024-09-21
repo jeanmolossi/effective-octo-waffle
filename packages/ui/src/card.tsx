@@ -1,4 +1,4 @@
-import { cn } from "@repo/utils"
+import { cn } from "@effective-octo-waffle/utils"
 import * as React from "react"
 
 const Card = React.forwardRef<

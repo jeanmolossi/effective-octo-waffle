@@ -1,5 +1,5 @@
 {
-	"name": "@repo/ui",
+	"name": "@effective-octo-waffle/ui",
 	"description": "UI components for Your App",
 	"version": "0.0.1",
 	"main": "./dist/index.mjs",
@@ -20,8 +20,8 @@
 		"react": "^18.2.0"
 	},
 	"devDependencies": {
-		"@repo/ts-config": "workspace:*",
-		"@repo/utils": "workspace:*",
+		"@effective-octo-waffle/ts-config": "workspace:*",
+		"@effective-octo-waffle/utils": "workspace:*",
 		"@types/node": "^20.11.24",
 		"@types/react": "^18.2.61",
 		"@types/react-dom": "^18.2.19",

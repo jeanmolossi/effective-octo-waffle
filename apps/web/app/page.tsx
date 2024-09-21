@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui"
+import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from "@effective-octo-waffle/ui"
 import { ArrowRightCircle } from "lucide-react"
 import Image from "next/image"
 

@@ -8,7 +8,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/ts-config": "workspace:*",
+    "@effective-octo-waffle/ts-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
