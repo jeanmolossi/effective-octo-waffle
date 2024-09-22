@@ -7,8 +7,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Your app',
-	description: 'That is the app initial page',
+	title: 'NexoChat',
+	description: 'Centralize a comunicação com seus clientes em múltiplos canais. Automatize respostas, crie chatbots personalizados e analise métricas para otimizar seu atendimento ao cliente.',
 }
 
 export default function RootLayout({
