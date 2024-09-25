@@ -4,6 +4,7 @@ import './styles.css'
 export * from './button'
 export * from './card'
 export * from './input'
+export * from './wordmark'
 
 // providers
 export * from './theme-provider'

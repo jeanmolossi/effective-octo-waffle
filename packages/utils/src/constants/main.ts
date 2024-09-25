@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 3000
+
 export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'NexoChat'
 
 export const SHORT_DOMAIN =
@@ -8,7 +10,7 @@ export const HOME_DOMAIN = `https://${process.env.NEXT_PUBLIC_APP_DOMAIN}`
 export const APP_HOSTNAMES = new Set([
 	`app.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
 	`preview.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
-	`localhost:3000`,
+	`localhost:${PORT}`,
 	`localhost`,
 ])
 
@@ -19,17 +21,17 @@ export const APP_DOMAIN = IS_VERCEL_PROD_ENV
 	? `https://app.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
 	: IS_VERCEL_PREVIEW_ENV
 		? `https://preview.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
-		: `http://localhost:3000`
+		: `http://localhost:${PORT}`
 
 export const API_HOSTNAMES = new Set([
 	`api.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
 	`api-staging.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
 	`api.${SHORT_DOMAIN}`,
-	`api.localhost:3000`,
+	`api.localhost:${PORT}`,
 ])
 
 export const API_DOMAIN = IS_VERCEL_PROD_ENV
 	? `https://api.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
 	: IS_VERCEL_PREVIEW_ENV
 		? `https://api-staging.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
-		: `http://api.localhost:3000`
+		: `http://api.localhost:${PORT}`

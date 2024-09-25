@@ -14,12 +14,14 @@ const ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 const LOGIN_PAGE = '/acessar'
 const REGISTER_PAGE = '/cadastro'
+const CALLBACK_PAGE = '/auth/callback'
 const SETTINGS_PATH = '/settings/'
 const ONBOARDING_PATH = '/onboarding'
 
+const ONBOARDING_COMPLETED_STEP = 'finalizado'
+
 export default async function AppMiddleware(request: NextRequest) {
 	const { path, fullPath } = parse(request)
-
 	let response = NextResponse.next({ request })
 
 	const supabase = createServerClient(SUPABASE_URL, ANON_KEY, {
@@ -51,9 +53,10 @@ export default async function AppMiddleware(request: NextRequest) {
 
 	const isLoginPath = path === LOGIN_PAGE
 	const isRegisterPath = path === REGISTER_PAGE
+	const isCallbackPage = path === CALLBACK_PAGE
 
 	// se o usr nao esta logado e nao esta em pagina de login ou de registro
-	if (!user && !isLoginPath && !isRegisterPath) {
+	if (!user && !isLoginPath && !isRegisterPath && !isCallbackPage) {
 		const whereToGo =
 			path === '/' ? '' : `?redir_to=${encodeURIComponent(fullPath)}`
 		return NextResponse.redirect(
@@ -78,21 +81,21 @@ export default async function AppMiddleware(request: NextRequest) {
 			userCreatedLessThanADayAgo &&
 			!isWorkspaceInvite &&
 			!path.startsWith(ONBOARDING_PATH) &&
-			(await getOnboardingStep(user)) !== 'completed'
+			(await getOnboardingStep(user)) !== ONBOARDING_COMPLETED_STEP
 		) {
 			let step = await getOnboardingStep(user)
 			if (!step) {
 				return NextResponse.redirect(
 					new URL(ONBOARDING_PATH, request.url),
 				)
-			} else if (step === 'completed') {
+			} else if (step === ONBOARDING_COMPLETED_STEP) {
 				return WorkspacesMiddleware(request, user)
 			}
 
 			const defaultWorkspace = await getDefaultWorkspace(user)
 
 			if (defaultWorkspace) {
-				step = step === 'workspace' ? 'link' : step
+				step = step === 'workspace' ? 'plano' : step
 				return NextResponse.redirect(
 					new URL(
 						`${ONBOARDING_PATH}/${step}?workspace=${defaultWorkspace}`,

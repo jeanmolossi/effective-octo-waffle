@@ -1,5 +1,5 @@
 // functions
-export * from './functions/cn'
+export * from './functions'
 
 // constants
 export * from './constants'

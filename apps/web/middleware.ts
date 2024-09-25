@@ -1,5 +1,6 @@
 import { API_HOSTNAMES, APP_HOSTNAMES } from '@effective-octo-waffle/utils'
 import { NextResponse, type NextRequest } from 'next/server'
+import ApiMiddleware from './lib/middleware/api'
 import AppMiddleware from './lib/middleware/app'
 import { parse } from './lib/middleware/helpers'
 
@@ -13,7 +14,7 @@ export async function middleware(request: NextRequest) {
 
 	// para a api
 	if (API_HOSTNAMES.has(domain)) {
-		// return ApiMiddleware(request)
+		return ApiMiddleware(request)
 	}
 
 	// redirect padrao
