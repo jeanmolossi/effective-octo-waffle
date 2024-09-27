@@ -2,9 +2,18 @@ import '@/styles/globals.css';
 import { ThemeProvider } from '@effective-octo-waffle/ui';
 import '@effective-octo-waffle/ui/dist/index.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Nunito_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+	subsets: ['latin'],
+	variable: '--font-inter'
+})
+const nunito = Nunito_Sans({
+	display: 'swap',
+	subsets: ['latin'],
+	weight: ['400', '600', '700'],
+	variable: '--font-nunito-sans'
+})
 
 export const metadata: Metadata = {
 	title: 'NexoChat',
@@ -18,7 +27,7 @@ export default function RootLayout({
 }): JSX.Element {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={`${inter.variable} ${nunito.variable}`}>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'

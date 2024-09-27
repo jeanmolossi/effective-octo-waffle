@@ -34,6 +34,8 @@
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
+		"@radix-ui/react-label": "^2.1.0",
+		"@radix-ui/react-radio-group": "^1.2.0",
 		"@radix-ui/react-slot": "^1.0.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
@@ -42,21 +44,21 @@
 		"tailwind-merge": "^2.2.2",
 		"tailwindcss-animate": "^1.0.7"
 	},
-  "author": "Jean Molossi <jean.carlosmolossi@gmail.com>",
-  "homepage": "https://jeanmolossi.com.br",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeanmolossi/saas-first-steps.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jeanmolossi/saas-first-steps/issues"
-  },
-  "keywords": [
-    "saas",
-    "boilerplate",
-    "ui"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+	"author": "Jean Molossi <jean.carlosmolossi@gmail.com>",
+	"homepage": "https://jeanmolossi.com.br",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeanmolossi/saas-first-steps.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jeanmolossi/saas-first-steps/issues"
+	},
+	"keywords": [
+		"saas",
+		"boilerplate",
+		"ui"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
 }
