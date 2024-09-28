@@ -7,3 +7,7 @@ export interface UserProps {
 	source: string | null
 	defaultWorkspace?: string
 }
+
+export const roles = ['owner', 'member'] as const
+
+export type Role = (typeof roles)[number]

@@ -8,6 +8,27 @@
       "when": 1727209799208,
       "tag": "0000_even_cerebro",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1727463224894,
+      "tag": "0001_slimy_maddog",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727463381778,
+      "tag": "0002_flashy_living_mummy",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1727463491446,
+      "tag": "0003_absurd_vapor",
+      "breakpoints": true
     }
   ]
 }
